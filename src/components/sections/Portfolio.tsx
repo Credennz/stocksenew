@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, DollarSign, PieChart } from 'lucide-react';
+import { TrendingUp, DollarSign, IndianRupee, PieChart } from 'lucide-react';
 
 const PortfolioCard = ({ title, value, change, icon: Icon }) => (
   <motion.div
@@ -18,7 +18,26 @@ const PortfolioCard = ({ title, value, change, icon: Icon }) => (
       </span>
     </div>
     <h3 className="text-lg font-semibold text-primary mb-2">{title}</h3>
-    <p className="text-2xl font-bold text-primary-dark">${value}</p>
+    <p className="text-2xl font-bold text-primary-dark"> &#8377;{value}</p>
+  </motion.div>
+);
+const PortfolioCard2 = ({ title, value, change, icon: Icon }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    className="bg-white rounded-xl shadow-lg p-6"
+  >
+    <div className="flex items-center justify-between mb-4">
+      <div className="p-2 bg-primary/10 rounded-lg">
+        <Icon className="w-6 h-6 text-primary" />
+      </div>
+      <span className={`text-sm font-semibold ${change >= 0 ? 'text-primary' : 'text-red-500'}`}>
+        {change >= 0 ? '+' : ''}{change}%
+      </span>
+    </div>
+    <h3 className="text-lg font-semibold text-primary mb-2">{title}</h3>
+    <p className="text-2xl font-bold text-primary-dark"> {value}</p>
   </motion.div>
 );
 
@@ -43,20 +62,20 @@ export const Portfolio = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <PortfolioCard
             title="Total Assets"
-            value="2.5B"
+            value="23 cr"
             change={12.5}
-            icon={DollarSign}
+            icon={IndianRupee}
           />
           <PortfolioCard
-            title="Stock Growth"
-            value="850M"
-            change={8.3}
+            title="Portfolio Growth"
+            value="10 cr"
+            change={43.5}
             icon={TrendingUp}
           />
-          <PortfolioCard
-            title="Market Share"
-            value="1.2B"
-            change={15.7}
+          <PortfolioCard2
+            title="Customer Growth"
+            value="30% YoY increase"
+            change={30}
             icon={PieChart}
           />
         </div>
@@ -67,10 +86,10 @@ export const Portfolio = () => {
               <h3 className="text-2xl font-bold text-primary mb-4">Investment Distribution</h3>
               <ul className="space-y-4">
                 {[
-                  { label: 'Technology Sector', value: '35%' },
-                  { label: 'Financial Services', value: '28%' },
-                  { label: 'Healthcare', value: '20%' },
-                  { label: 'Real Estate', value: '17%' }
+                   { label: 'Financial Services', value: '50%' },
+                  { label: 'Technology Sector', value: '20%' },                 
+                  { label: 'StartUps', value: '20%' },
+                  { label: 'Real Estate', value: '10%' }
                 ].map(item => (
                   <li key={item.label} className="flex items-center justify-between">
                     <span className="text-primary-dark/70">{item.label}</span>
@@ -83,8 +102,7 @@ export const Portfolio = () => {
               <h3 className="text-2xl font-bold text-primary mb-4">Key Achievements</h3>
               <ul className="space-y-2">
                 {[
-                  '15% average annual return',
-                  '$500M+ in successful exits',
+                  '50% average annual return',
                   '100+ portfolio companies'
                 ].map(item => (
                   <li key={item} className="flex items-center text-primary-dark/70">

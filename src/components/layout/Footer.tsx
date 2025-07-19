@@ -34,8 +34,8 @@ export const Footer = () => {
               Empowering traders with cutting-edge tools and strategies for market success.
             </p>
             <div className="space-y-3">
-              <a href="mailto:support@stockse.com" className="flex items-center gap-2 text-white/70 hover:text-white">
-                <Mail className="w-4 h-4" /> support@stockse.com
+              <a href="mailto:support@stockse.in" className="flex items-center gap-2 text-white/70 hover:text-white">
+                <Mail className="w-4 h-4" /> support@stockse.in
               </a>
               <div className="space-y-1">
                 <a href="tel:+917008013957" className="flex items-center gap-2 text-white/70 hover:text-white">
@@ -59,9 +59,14 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              {['About Us', 'Performance', 'Strategies', 'Contact Us', 'Blog', 'Terms & Conditions', 'Privacy Policy'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-white/70 hover:text-white">{link}</a>
+              {[{title :'About Us',link : 'about'},
+              {title :'Performance',link : 'performance'},
+              {title :'Strategies',link : 'strategies'},
+              {title :'Blog',link : '#'},
+              {title :'Terms & Conditions',link : '#'},
+              {title :'Privacy Policy',link : '#'}].map((k,index) => (
+                <li key={index}>
+                  <a href={k.link} className="text-white/70 hover:text-white">{k.title}</a>
                 </li>
               ))}
             </ul>

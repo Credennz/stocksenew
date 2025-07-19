@@ -25,18 +25,18 @@ export const About = () => {
           {[
             {
               icon: Award,
-              title: "Excellence",
-              description: "10+ years of fintech innovation and leadership in the industry"
+              title: "Innovation",
+              description: "Harnessing data-driven insights and machine learning to redefine how finance works"
             },
             {
               icon: Target,
-              title: "Mission",
-              description: "Democratizing finance through cutting-edge technology and accessibility"
+              title: "Transparency",
+              description: "Ensuring clear, honest communication and empowering you with control over your finances"
             },
             {
               icon: Users2,
-              title: "Team",
-              description: "Global team of 200+ experts dedicated to your financial success"
+              title: "Community",
+              description: "Creating opportunities for collaboration, education, and growth across all stakeholders"
             }
           ].map((item, index) => (
             <motion.div

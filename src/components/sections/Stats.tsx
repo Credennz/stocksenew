@@ -15,19 +15,23 @@ const stats = [
     icon: Users,
     value: '2M+',
     label: 'Active Users',
+    sublabel: '',
     description: 'Trust our platform for their financial needs'
   },
   {
     icon: Building2,
     value: '4+',
     label: 'Exclusive Partners',
+    sublabel: '',
     partners: partners
   },
   {
-    icon: Globe2,
+    icon: '',
+    img:'survey.png',
     value: '500+',
-    label: 'Enterprise Clients',
-    description: 'Rely on our enterprise solutions'
+    label: 'Projects Completed',
+    sublabel: '1,200+ Projects Delivered',
+    description: 'Turning ideas into reality with precision and expertise'
   }
 ];
 
@@ -46,12 +50,16 @@ export const Stats = () => {
             >
               <div className="flex justify-center mb-4">
                 {stat.icon && <stat.icon className="w-8 h-8 text-white/80" />}
+                {stat.img && (<span><img className='lucide lucide-earth w-8 h-8 text-white/80' src={stat.img} ></img></span>)}
               </div>
               <div className="text-3xl font-bold text-white mb-2">
                 {stat.value}
               </div>
               <div className="text-lg font-semibold text-white/90 mb-1">
                 {stat.label}
+              </div>
+              <div className="text-lg font-semibold text-white/90 mb-1">
+                {stat.sublabel}
               </div>
               {stat.description && (
                 <p className="text-white/70 text-sm mb-2">
