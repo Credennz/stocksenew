@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
             animate={{ opacity: 1 }}
             className="text-white font-bold text-xl hover:text-white/80 transition-colors cursor-pointer"
           >
-            StockSe
+           <img className='logo-stockse' src="logo.png" ></img>
           </motion.button>
 
           <nav className="hidden md:flex space-x-8">

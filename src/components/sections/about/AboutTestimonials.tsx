@@ -5,13 +5,13 @@ import { Quote } from 'lucide-react';
 const testimonials = [
   {
     content: "StockSe's algorithmic trading solutions have transformed our investment strategy. The results speak for themselves.",
-    author: "David Miller",
+    author: "Milan Danga",
     position: "Portfolio Manager",
     company: "Capital Investments"
   },
   {
     content: "The team's expertise and dedication to client success is unmatched. They've helped us achieve consistent returns.",
-    author: "Lisa Chen",
+    author: "Suraj Mishra",
     position: "Head Trader",
     company: "Global Trading Co."
   }

@@ -28,14 +28,14 @@ export const PerformanceBanner = () => {
             <p className="text-lg text-white/80 mb-8 max-w-2xl">
               Trusted by thousands of traders, driven by performance. Discover our track record of consistent returns and market-beating strategies.
             </p>
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={handleWhatsAppClick}
               className="bg-white text-primary px-8 py-3 rounded-lg font-semibold inline-flex items-center gap-2 hover:bg-white/90 transition-colors"
             >
               Chat with Us on WhatsApp
-            </motion.button>
+            </motion.button> */}
           </motion.div>
         </div>
       </div>

@@ -6,23 +6,23 @@ const testimonials = [
   {
     id: 1,
     content: "The algorithmic trading solutions have completely transformed our trading strategy. The results have been exceptional.",
-    author: "John D.",
+    author: "Umang Paraikh",
     position: "Senior Trader",
     company: "Trading Firm"
   },
   {
     id: 2,
     content: "Their portfolio management tools provide incredible insights. It's made our decision-making process much more efficient.",
-    author: "Sarah M.",
+    author: "Prajyolita Dwibedi",
     position: "Investment Manager",
     company: "Asset Management Co."
   },
   {
     id: 3,
     content: "The wealth management services are top-notch. Our portfolio has seen consistent growth since we started working with them.",
-    author: "Michael R.",
+    author: "Sunil Jadav",
     position: "Private Client",
-    company: "Family Office"
+    company: "Trading Firm"
   }
 ];
 

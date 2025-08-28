@@ -18,6 +18,12 @@ export const Footer = () => {
   const { openGetStarted } = useModal();
   const [email, setEmail] = React.useState('');
 
+  const SOCIAL_LINKS = [
+  { icon: Twitter, url: "https://x.com/stockse_" },
+  { icon: Instagram, url: "https://www.instagram.com/stockse.ind" },
+  { icon: Youtube, url: "https://www.youtube.com/@stockse_ind" },
+];
+
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     setEmail('');
@@ -34,8 +40,8 @@ export const Footer = () => {
               Empowering traders with cutting-edge tools and strategies for market success.
             </p>
             <div className="space-y-3">
-              <a href="mailto:support@stockse.in" className="flex items-center gap-2 text-white/70 hover:text-white">
-                <Mail className="w-4 h-4" /> support@stockse.in
+              <a href="mailto:hello@stockse.in" className="flex items-center gap-2 text-white/70 hover:text-white">
+                <Mail className="w-4 h-4" /> hello@stockse.in
               </a>
               <div className="space-y-1">
                 <a href="tel:+917008013957" className="flex items-center gap-2 text-white/70 hover:text-white">
@@ -117,16 +123,18 @@ export const Footer = () => {
               © 2024 StockSe. All rights reserved.
             </div>
             <div className="flex gap-4">
-              {[Facebook, Twitter, Linkedin, Instagram, Youtube].map((Icon, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-                >
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
-            </div>
+      {SOCIAL_LINKS.map(({ icon: Icon, url }, index) => (
+        <a
+          key={index}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+        >
+          <Icon className="w-4 h-4" />
+        </a>
+      ))}
+    </div>
           </div>
         </div>
       </div>

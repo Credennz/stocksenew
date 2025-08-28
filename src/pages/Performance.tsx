@@ -3,7 +3,6 @@ import { PerformanceBanner } from '../components/sections/performance/Performanc
 import { PerformanceMetrics } from '../components/sections/performance/PerformanceMetrics';
 import { Partners } from '../components/sections/performance/Partners';
 import { CalculatorGrid } from '../components/calculator/CalculatorGrid';
-import { TestimonialSlider } from '../components/sections/TestimonialSlider';
 import { ContactForm } from '../components/sections/performance/ContactForm';
 
 export default function PerformancePage() {
@@ -13,7 +12,6 @@ export default function PerformancePage() {
       <PerformanceMetrics />
       <Partners />
       <CalculatorGrid />
-      <TestimonialSlider />
       <ContactForm />
     </div>
   );
