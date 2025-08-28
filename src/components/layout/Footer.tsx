@@ -47,12 +47,7 @@ export const Footer = () => {
                 <a href="tel:+917008013957" className="flex items-center gap-2 text-white/70 hover:text-white">
                   <Phone className="w-4 h-4" /> +91 7008013957
                 </a>
-                <a href="tel:+917978013108" className="flex items-center gap-2 text-white/70 hover:text-white pl-6">
-                  +91 7978013108
-                </a>
-                <a href="tel:+917008014367" className="flex items-center gap-2 text-white/70 hover:text-white pl-6">
-                  +91 7008014367
-                </a>
+              
               </div>
               <div className="flex items-start gap-2 text-white/70">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
